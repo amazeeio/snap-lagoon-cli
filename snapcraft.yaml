@@ -1,0 +1,22 @@
+name: lagoon-cli 
+version: '0.7.5' 
+summary: lagoon-cli snap package
+description: |
+  This is a CLI for interacting with a Lagoon instance.
+  By default, it is configured to work against Amazee.io instance.
+
+grade: stable 
+confinement: strict 
+architectures:
+  - amd64
+
+apps:
+  lagoon:
+    command: lagoon
+
+parts:
+  lagoon:
+    plugin: dump
+    source: https://github.com/amazeeio/lagoon-cli/releases/download/0.7.5/lagoon-cli-0.7.5-linux-amd64.tar.gz
+    source-type: tar
+
